@@ -5,9 +5,9 @@ const typeDefs = gql`
 		_id: ID
 		title: String
 		photos: [String]
-		Location: UNKNOWN
-		datePosted: DateTime
-		ask: Number
+		Location: String
+		datePosted: String
+		ask: Float
 		tags: [Tag]
 	}
 
@@ -32,8 +32,8 @@ const typeDefs = gql`
 	type ChatMessage {
 		from: User
 		message: String
-		timestamp: DateTime
-		offer: Number
+		timestamp: String
+		offer: Float
 	}
 
 	type Tag {
@@ -43,6 +43,15 @@ const typeDefs = gql`
 	}
 	type Query {
 		item(_id: ID): Item
+	}
+
+	type Auth {
+		user: User
+		token: String
+	}
+	type Mutation {
+		addUser(username: String!, email: String!, password: String!): Auth
+		login(email: String!, password: String!): Auth
 	}
 `;
 
