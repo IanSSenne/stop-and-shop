@@ -9,7 +9,7 @@
 		"concurrently": "^7.6.0"
 	},
 	"scripts": {
-		"start:dev": "concurrently \"cd server && yarn start\" \"cd client && yarn start\"",
+		"start:dev": "concurrently \"cd server && yarn start:dev\" \"cd client && yarn start\"",
 		"start": "cd server && yarn start",
 		"build:client": "cd client && yarn build",
 		"deploy": "yarn build:client",
