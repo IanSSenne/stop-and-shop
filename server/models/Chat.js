@@ -12,7 +12,7 @@ const chatSchema = new Schema({
     ],
     visibleTo: {
         type: Schema.Types.ObjectId,
-        ref: "User",
+        ref: ["User"],
     }
 })
 
