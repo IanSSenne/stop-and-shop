@@ -26,12 +26,14 @@ const typeDefs = gql`
     type Chat {
         _id: ID 
         visibleTo: [User]
-        Message: [{
+        Message: [ChatMessage]
+    }
+
+    type ChatMessage{
         from: User,
         message: String
         timestamp: DateTime
-        offer: number (nullable)
-        }]
+        offer: Number
     }
 
     type Tag {
@@ -43,10 +45,6 @@ const typeDefs = gql`
         item(_id: ID): Item
         
 
-    }
-
-    type Mutation {
-    
     }
 `;
 

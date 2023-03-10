@@ -1,7 +1,11 @@
 const { Schema, model } = require("mongoose");
+const User = require('./User')
 
 const messageSchema = new Schema({
-        from: User,
+        from: {
+            type: Schema.Types.ObjectId,
+            ref: User,
+        },
         message:String,
         timestamp: Date,
         offer: Number
@@ -12,7 +16,7 @@ const chatSchema = new Schema({
     ],
     visibleTo: {
         type: Schema.Types.ObjectId,
-        ref: ["User"],
+        ref: User,
     }
 })
 
