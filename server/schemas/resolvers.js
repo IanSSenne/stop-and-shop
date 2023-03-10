@@ -13,8 +13,25 @@ const resolvers = {
 	//     },
 	//     item: async (parent, )
 	// },
-	// Mutation: {
-	// }
+	Mutation: {
+		async addUser(parent, { username, email, password }, context) {
+			const user = await User.create({ displayName: username, email, password });
+			const token = signToken(user);
+			return { token, user };
+		},
+		async login(parent, { email, password }) {
+			const user = await User.findOne({ email });
+			if (!user) {
+				throw new AuthenticationError("No user found with this email address");
+			}
+			const isCorrectPassword = user.isCorrectPassword(password);
+			if (!isCorrectPassword) {
+				throw new AuthenticationError("Incorrect credentials");
+			}
+			const token = signToken(user);
+			return { token, user };
+		},
+	},
 };
 
 module.exports = resolvers;
