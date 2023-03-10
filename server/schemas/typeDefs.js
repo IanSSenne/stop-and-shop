@@ -40,7 +40,9 @@ const typeDefs = gql`
         color: String
     }
     type Query {
-    
+        item(_id: ID): Item
+        
+
     }
 
     type Mutation {
