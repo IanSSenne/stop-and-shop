@@ -1,0 +1,6 @@
+{
+	"bracketSameLine": true,
+	"embeddedLanguageFormatting": "auto",
+	"useTabs": true,
+	"printWidth": 120
+}
