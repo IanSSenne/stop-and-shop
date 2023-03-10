@@ -12,6 +12,7 @@
 		"start:dev": "concurrently \"cd server && yarn start\" \"cd client && yarn start\"",
 		"start": "cd server && yarn start",
 		"build:client": "cd client && yarn build",
-		"deploy": "yarn build:client"
+		"deploy": "yarn build:client",
+		"install": "cd client && yarn install && cd ../server && yarn install"
 	}
 }
