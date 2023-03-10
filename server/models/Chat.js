@@ -20,7 +20,6 @@ const chatSchema = new Schema({
     }
 })
 
-
-const Chat = model('Chat', chatSchema);
+const Chat = model("Chat", chatSchema);
 
 module.exports = Chat;
