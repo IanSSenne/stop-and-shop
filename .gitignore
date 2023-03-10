@@ -1,0 +1,8 @@
+# a gitignore for a nodejs project
+#
+
+# dependencies
+
+node_modules
+.DS_Store
+.env
