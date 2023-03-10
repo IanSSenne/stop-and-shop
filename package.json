@@ -6,13 +6,15 @@
 	"author": "Ian Senne <ian@iansenne.com>",
 	"license": "MIT",
 	"devDependencies": {
-		"concurrently": "^7.6.0"
+		"concurrently": "^7.6.0",
+		"prettier": "^2.8.4"
 	},
 	"scripts": {
 		"start:dev": "concurrently \"cd server && yarn start:dev\" \"cd client && yarn dev\"",
 		"start": "cd server && yarn start",
 		"build:client": "cd client && yarn build",
 		"deploy": "yarn build:client",
-		"install": "cd client && yarn install && cd ../server && yarn install"
+		"install": "cd client && yarn install && cd ../server && yarn install",
+		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
 	}
 }
