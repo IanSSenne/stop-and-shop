@@ -2,52 +2,52 @@ const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
 const userSchema = new Schema({
-	displayName: {
-		type: String,
-		required: true,
-	},
-	email: {
-		type: String,
-		required: true,
-		unique: true,
-		match: [/.+@.+\..+/, "Must match an email address!"],
-	},
-	password: {
-		type: String,
-		required: true,
-		minlength: 6,
-	},
-	bookmarkedItems: [
-		{
-			type: Schema.Types.ObjectId,
-			ref: "Item",
-		},
-	],
-	sellingItems: [
-		{
-			type: Schema.Types.ObjectId,
-			ref: "Item",
-		},
-	],
-	purchasedItems: [
-		{
-			type: Schema.Types.ObjectId,
-			ref: "Item",
-		},
-	],
-	chats: [
-		{
-			type: Schema.Types.ObjectId,
-			ref: "Chat",
-		},
-	],
-	interests: [
-		{
-			type: Schema.Types.ObjectId,
-			ref: "Tag",
-		},
-	],
-});
+        displayName: {
+            type: String,
+            required: true,
+        },
+        email: {
+            type: String,
+            required: true,
+            unique: true,
+            match: [/.+@.+\..+/, 'Must match an email address!'],
+        },
+        password: {
+            type: String,
+            required: true,
+            minlength: 6,
+          },
+        bookmarkedItems: [
+           {
+            type: Schema.Types.ObjectId,
+            ref: "Item"
+           }, 
+        ],
+        sellingItems: [
+            {
+            type: Schema.Types.ObjectId,
+            ref: "Item"
+            },
+        ],
+        purchasedItems: [
+            {
+            type: Schema.Types.ObjectId,
+            ref: "Item"
+            },
+        ],
+        chats: [
+            {
+            type: Schema.Types.ObjectId,
+            ref: "Chat"
+            }
+        ],
+        interests: [
+            {
+            type: Schema.Types.ObjectId,
+            ref: "Tag"
+            }
+        ],
+    });
 
 userSchema.pre("save", async function (next) {
 	if (this.isNew || this.isModified("password")) {
