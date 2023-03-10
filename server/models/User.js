@@ -1,8 +1,7 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require('bcrypt');
 
-const userSchema = new Schema(
-    {
+const userSchema = new Schema({
         displayName: {
             type: String,
             required: true,
@@ -48,8 +47,7 @@ const userSchema = new Schema(
             ref: "Tag"
             }
         ],
-    }
-);
+    });
 
 userSchema.pre('save', async function (next) {
     if (this.isNew || this.isModified('password')) {
