@@ -5,7 +5,7 @@ const typeDefs = gql`
 		_id: ID
 		title: String
 		photos: [String]
-		Location: String
+		location: String
 		datePosted: String
 		ask: Float
 		tags: [Tag]
@@ -44,6 +44,7 @@ const typeDefs = gql`
 
 	type Query {
 		item(_id: ID): Item
+		items: [Item]
 	}
 
 	type Auth {
@@ -54,6 +55,7 @@ const typeDefs = gql`
 		addUser(username: String!, email: String!, password: String!): Auth
 		login(email: String!, password: String!): Auth
 	}
+	
 `;
 
 module.exports = typeDefs;
