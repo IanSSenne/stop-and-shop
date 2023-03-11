@@ -80,7 +80,7 @@ const seed = [
 		__type: Models.Item,
 		title: "Test Item 1",
 		photos: ["https://via.placeholder.com/150"],
-		Location: "Test Location 1",
+		location: "Test Location 1",
 		datePosted: "2021-01-01",
 		ask: 10.0,
 		tags: [
@@ -98,7 +98,7 @@ const seed = [
 		__type: Models.Item,
 		title: "Test Item 2",
 		photos: ["https://via.placeholder.com/150"],
-		Location: "Test Location 2",
+		location: "Test Location 2",
 		datePosted: "2021-01-01",
 		ask: 10.0,
 		tags: [
@@ -116,7 +116,7 @@ const seed = [
 		__type: Models.Item,
 		title: "Test Item 3",
 		photos: ["https://via.placeholder.com/150"],
-		Location: "Test Location 3",
+		location: "Test Location 3",
 		datePosted: "2021-01-01",
 		ask: 10.0,
 		tags: [
