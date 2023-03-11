@@ -18,18 +18,18 @@ export const QUERY_ITEMS = gql`
 `;
 
 export const QUERY_TAGS = gql`
-{
-    tags {
-    _id
-    name
-    color
+    {
+        tags {
+            _id
+            name
+            color
+        }
     }
-}
 `;
 
 export const QUERY_SINGLE_ITEM = gql`
     {
-        item {
+        items {
             _id
             title
             photos
@@ -69,4 +69,12 @@ export const QUERY_USER = gql`
         }
     }
 
+`;
+
+export const QUERY_ALL_ITEMS = gql`
+    {
+        items {
+        
+        }
+    }
 `;
