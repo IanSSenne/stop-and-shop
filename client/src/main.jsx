@@ -6,7 +6,7 @@ import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { AuthProvider } from "./contexts/Auth";
 import { ApolloProvider } from "@apollo/client";
-import { client } from "./util/apolloClient";
+import { client } from "./utils/apolloClient";
 function Show(props) {
 	const params = useParams();
 	const route = useResolvedPath();

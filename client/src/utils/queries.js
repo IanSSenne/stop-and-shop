@@ -27,20 +27,20 @@ export const QUERY_TAGS = gql`
 `;
 
 export const QUERY_ALL_ITEMS = gql`
-	{
-		items {
-			_id
-			title
-			photos
-			Location
-			datePosted
-			ask
-			tag {
-				name
-			}
-		}
+query ExampleQuery {
+	items {
+	  _id
+	  Location
+	  ask
+	  datePosted
+	  photos
+	  tags {
+		_id
+		name
+		color
+	  }
 	}
-	}
+  }
 `;
 
 export const QUERY_SINGLE_ITEM = gql`
