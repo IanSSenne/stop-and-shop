@@ -4,17 +4,16 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
 	Query: {
-	    user: async (parent, args, context) => {
-	        if (context.user) {
-	            const user = await User.findById(context.user._id)
-	            .populate({
-					path: 'item',
-					populate: 'tag'
-	            });
-	        }
-	    },
+		user: async (parent, args, context) => {
+			if (context.user) {
+				const user = await User.findById(context.user._id).populate({
+					path: "item",
+					populate: "tag",
+				});
+			}
+		},
 		items: async () => Item.find().populate("tags"),
-	    item: async (parent, {_id}) => {
+		item: async (parent, { _id }) => {
 			return await Item.findById(_id);
 		},
 		tags: async () => {
@@ -46,7 +45,7 @@ const resolvers = {
 			return { token, user };
 		},
 		async removeItem(parent, { itemId }) {
-			return Item.findOneAndDelete({_id: itemId});
+			return Item.findOneAndDelete({ _id: itemId });
 		},
 	},
 };
