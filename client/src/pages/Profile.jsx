@@ -1,12 +1,17 @@
 import React from "react";
-import ItemList from "../components/ItemList";
+import UserItems from "../components/UserItems";
+import Bookmarked from "../components/Bookmarked";
 
-const Home = () => {
+export const Profile = () => {
     return (
         <div>
-            <ItemList />
+            <h2>Your Listings</h2>
+            <UserItems />
+        </div>,
+        <div>
+            <h2>Bookmarked Listings</h2>
+            <Bookmarked />
         </div>
     );
 };
 
-export default Home;

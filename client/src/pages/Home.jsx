@@ -1,12 +1,11 @@
 import React from "react";
-import ItemList from "../components/ItemList";
+import AllItems from "../components/AllItems";
 
 export const Home = () => {
     return (
         <div>
-            <ItemList />
+            <AllItems />
         </div>
     );
 };
 
-export default Home;

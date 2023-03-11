@@ -1,12 +1,11 @@
 import React from "react";
-import ItemList from "../components/Login";
+import LoginForm from "../components/Login";
 
-const Login = () => {
+export const Login = () => {
     return (
         <div>
-            <ItemList />
+            <LoginForm />
         </div>
     );
 };
 
-export default Login;

@@ -1,12 +1,11 @@
 import React from "react";
-import ItemList from "../components/ItemList";
+import Search from "../components/Search";
 
-const Home = () => {
+const Search = () => {
     return (
         <div>
-            <ItemList />
+            <Search />
         </div>
     );
 };
 
-export default Home;
