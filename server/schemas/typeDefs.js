@@ -44,7 +44,9 @@ const typeDefs = gql`
 
 	type Query {
 		item(_id: ID): Item
-		items: [Item]
+		tags: [Tag]
+		user: User
+		tag(tagId: ID): Tag
 	}
 
 	type Auth {
@@ -53,9 +55,10 @@ const typeDefs = gql`
 	}
 	type Mutation {
 		addUser(username: String!, email: String!, password: String!): Auth
+		addItem(title: String, photos: [String], Location: String, datePosted: String, ask: Float): Item
 		login(email: String!, password: String!): Auth
+		removeItem(itemId: ID): Item
 	}
-	
 `;
 
 module.exports = typeDefs;
