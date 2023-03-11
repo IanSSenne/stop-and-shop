@@ -73,11 +73,6 @@ escalade@^3.1.1:
   resolved "https://registry.npmjs.org/escalade/-/escalade-3.1.1.tgz"
   integrity sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==
 
-geolocator@^2.1.5:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/geolocator/-/geolocator-2.1.5.tgz#ac2a525aaa270278f5f5c56d50abe28a939472d7"
-  integrity sha512-8iwVj5e5hri5cI0qYBDV1/y9GoazcxxW1/etx5qBxq7GZ1+emsmg26CLeNG32jPWSoDphug45IlBMX3IPrC7MA==
-
 get-caller-file@^2.0.5:
   version "2.0.5"
   resolved "https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz"

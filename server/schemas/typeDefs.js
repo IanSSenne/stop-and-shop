@@ -44,6 +44,7 @@ const typeDefs = gql`
 
 	type Query {
 		item(_id: ID): Item
+		items: [Item]
 		tags: [Tag]
 		user: User
 		tag(tagId: ID): Tag
