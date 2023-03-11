@@ -41,6 +41,7 @@ const typeDefs = gql`
 		name: String
 		color: String
 	}
+
 	type Query {
 		item(_id: ID): Item
 	}
