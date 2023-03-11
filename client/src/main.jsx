@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./global.scss";
 import { createBrowserRouter, RouterProvider, useParams, useResolvedPath } from "react-router-dom";
-import {Home} from "./pages/Home";
+import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { AuthProvider } from "./contexts/Auth";
 import { ApolloProvider } from "@apollo/client";

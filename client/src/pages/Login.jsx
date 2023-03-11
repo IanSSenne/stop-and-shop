@@ -13,7 +13,7 @@ function Input(props) {
 }
 
 function arrayMatch(a, b) {
-	if(a.length !== b.length) {
+	if (a.length !== b.length) {
 		return false;
 	}
 	for (let i = 0; i < a.length; i++) {
@@ -30,45 +30,65 @@ function ErrorMessage({ errors, path }) {
 	if (myErrors.length === 0) {
 		return null;
 	}
-	return <div className="error">
-		<ul>
-			{myErrors.map((e) => <li key={e.message}>{e.message}</li>)}
-		</ul>
-	</div>;
-
+	return (
+		<div className="error">
+			<ul>
+				{myErrors.map((e) => (
+					<li key={e.message}>{e.message}</li>
+				))}
+			</ul>
+		</div>
+	);
 }
 const loginValidator = z.object({
 	email: z.string().email(),
-	password: z.string().min(6, "Password must be at least 8 characters").refine((v) => /[a-z]/.test(v), {
-		message: "Password must contain at least one lowercase letter",
-	}).refine((v) => /[A-Z]/.test(v), {
-		message: "Password must contain at least one uppercase letter",
-	}).refine((v) => /[0-9]/.test(v), {
-		message: "Password must contain at least one number",
-	}).refine((v) => /[^a-zA-Z0-9]/.test(v), {
-		message: "Password must contain at least one special character",
-	}),
+	password: z
+		.string()
+		.min(6, "Password must be at least 8 characters")
+		.refine((v) => /[a-z]/.test(v), {
+			message: "Password must contain at least one lowercase letter",
+		})
+		.refine((v) => /[A-Z]/.test(v), {
+			message: "Password must contain at least one uppercase letter",
+		})
+		.refine((v) => /[0-9]/.test(v), {
+			message: "Password must contain at least one number",
+		})
+		.refine((v) => /[^a-zA-Z0-9]/.test(v), {
+			message: "Password must contain at least one special character",
+		}),
 });
 
-const signUpValidator = z.object({
-	email: z.string().email(),
-	password: z.string().min(6, "Password must be at least 8 characters").refine((v) => /[a-z]/.test(v), {
-		message: "Password must contain at least one lowercase letter",
-	}).refine((v) => /[A-Z]/.test(v), {
-		message: "Password must contain at least one uppercase letter",
-	}).refine((v) => /[0-9]/.test(v), {
-		message: "Password must contain at least one number",
-	}).refine((v) => /[^a-zA-Z0-9]/.test(v), {
-		message: "Password must contain at least one special character",
-	}),
-	displayName: z.string().min(3, "Display name must be at least 3 characters"),
-	confirmPassword: z.string(),
-}).refine((data) => {
-	return data.confirmPassword === data.password
-}, {
-	message: "Passwords must match",
-	path: ["confirmPassword"],
-});
+const signUpValidator = z
+	.object({
+		email: z.string().email(),
+		password: z
+			.string()
+			.min(6, "Password must be at least 8 characters")
+			.refine((v) => /[a-z]/.test(v), {
+				message: "Password must contain at least one lowercase letter",
+			})
+			.refine((v) => /[A-Z]/.test(v), {
+				message: "Password must contain at least one uppercase letter",
+			})
+			.refine((v) => /[0-9]/.test(v), {
+				message: "Password must contain at least one number",
+			})
+			.refine((v) => /[^a-zA-Z0-9]/.test(v), {
+				message: "Password must contain at least one special character",
+			}),
+		displayName: z.string().min(3, "Display name must be at least 3 characters"),
+		confirmPassword: z.string(),
+	})
+	.refine(
+		(data) => {
+			return data.confirmPassword === data.password;
+		},
+		{
+			message: "Passwords must match",
+			path: ["confirmPassword"],
+		}
+	);
 
 export const Login = () => {
 	const auth = useAuth();
@@ -81,15 +101,15 @@ export const Login = () => {
 		const data = {
 			email: e.target.email.value,
 			password: e.target.password.value,
-		}
+		};
 		const result = loginValidator.safeParse(data);
 		if (result.success) {
-			setError(null)
+			setError(null);
 			auth.login(result.data);
 		} else {
 			setError(result.error);
 		}
-	}
+	};
 	const signUp = (e) => {
 		e.preventDefault();
 		const data = {
@@ -97,15 +117,15 @@ export const Login = () => {
 			password: e.target.password.value,
 			displayName: e.target.displayName.value,
 			confirmPassword: e.target.confirmPassword.value,
-		}
+		};
 		const result = signUpValidator.safeParse(data);
 		if (result.success) {
-			setError(null)
+			setError(null);
 			auth.signUp(result.data);
 		} else {
 			setError(result.error);
 		}
-	}
+	};
 	return (
 		<div>
 			<div>
@@ -113,8 +133,7 @@ export const Login = () => {
 				<button onClick={() => setFormMode("signup")}>Sign Up</button>
 			</div>
 			{formMode === "login" && (
-				<form
-					onSubmit={signIn}>
+				<form onSubmit={signIn}>
 					<Input type="email" name="email" label="Email" />
 					<ErrorMessage errors={error?.errors || []} path={["email"]} />
 					<Input type="password" name="password" label="Password" />
@@ -123,8 +142,7 @@ export const Login = () => {
 				</form>
 			)}
 			{formMode === "signup" && (
-				<form
-					onSubmit={signUp}>
+				<form onSubmit={signUp}>
 					<Input type="email" name="email" label="Email" />
 					<ErrorMessage errors={error?.errors || []} path={["email"]} />
 					<Input type="password" name="password" label="Password" />
