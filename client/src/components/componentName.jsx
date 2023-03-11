@@ -6,4 +6,4 @@ export const ComponentName = () => {
 			<h1 className={styles.title}>ComponentName</h1>
 		</div>
 	);
-}
+};
