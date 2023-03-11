@@ -3,7 +3,7 @@ const { User, Chat, Item, Tag } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
-	// Query: {
+	Query: {
 	//     user: async (parent, args, context) => {
 	//         if (context.user) {
 	//             const user = await User.findById(context.user._id)
@@ -11,8 +11,8 @@ const resolvers = {
 	//             })
 	//         }
 	//     },
-	//     item: async (parent, )
-	// },
+	    items: async () => Item.find().populate("tags")
+	},
 	Mutation: {
 		async addUser(parent, { username, email, password }, context) {
 			const user = await User.create({ displayName: username, email, password });

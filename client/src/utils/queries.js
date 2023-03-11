@@ -40,7 +40,6 @@ export const QUERY_ALL_ITEMS = gql`
 			}
 		}
 	}
-	}
 `;
 
 export const QUERY_SINGLE_ITEM = gql`
