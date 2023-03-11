@@ -30,7 +30,8 @@ export const QUERY_ALL_ITEMS = gql`
 	query ExampleQuery {
 		items {
 			_id
-			Location
+			title
+			location
 			ask
 			datePosted
 			photos
