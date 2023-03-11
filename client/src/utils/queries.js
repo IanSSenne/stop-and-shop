@@ -27,21 +27,21 @@ export const QUERY_TAGS = gql`
 `;
 
 export const QUERY_ALL_ITEMS = gql`
-query ExampleQuery {
-	items {
-	  _id
-	  title
-	  location
-	  ask
-	  datePosted
-	  photos
-	  tags {
-		_id
-		name
-		color
-	  }
+	query ExampleQuery {
+		items {
+			_id
+			title
+			location
+			ask
+			datePosted
+			photos
+			tags {
+				_id
+				name
+				color
+			}
+		}
 	}
-  }
 `;
 
 export const QUERY_SINGLE_ITEM = gql`
