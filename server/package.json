@@ -14,7 +14,7 @@
 	"scripts": {
 		"start:dev": "node-dev server.js",
 		"start": "node server.js --production",
-		"seed": "node seeds/seeds.js"
+		"seed": "node ./seeds/seeds.js"
 	},
 	"devDependencies": {
 		"node-dev": "^8.0.0"
