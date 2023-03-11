@@ -13,6 +13,7 @@ const resolvers = {
 	            });
 	        }
 	    },
+		items: async () => Item.find().populate("tags"),
 	    item: async (parent, {_id}) => {
 			return await Item.findById(_id);
 		},
