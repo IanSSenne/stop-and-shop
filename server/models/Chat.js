@@ -12,10 +12,12 @@ const messageSchema = new Schema({
 });
 const chatSchema = new Schema({
 	messages: [messageSchema],
-	visibleTo: {
-		type: Schema.Types.ObjectId,
-		ref: User,
-	},
+	visibleTo: [
+		{
+			type: Schema.Types.ObjectId,
+			ref: User,
+		},
+	],
 });
 
 const Chat = model("Chat", chatSchema);
