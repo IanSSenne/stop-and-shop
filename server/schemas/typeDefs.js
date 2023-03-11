@@ -5,7 +5,7 @@ const typeDefs = gql`
 		_id: ID
 		title: String
 		photos: [String]
-		Location: String
+		location: String
 		datePosted: String
 		ask: Float
 		tags: [Tag]
