@@ -1,53 +1,62 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
-const userSchema = new Schema({
-	displayName: {
-		type: String,
-		required: true,
+const userSchema = new Schema(
+	{
+		displayName: {
+			type: String,
+			required: true,
+		},
+		email: {
+			type: String,
+			required: true,
+			unique: true,
+			match: [/.+@.+\..+/, "Must match an email address!"],
+		},
+		password: {
+			type: String,
+			required: true,
+			minlength: 6,
+		},
+		bookmarkedItems: [
+			{
+				type: Schema.Types.ObjectId,
+				ref: "Item",
+			},
+		],
+		sellingItems: [
+			{
+				type: Schema.Types.ObjectId,
+				ref: "Item",
+			},
+		],
+		purchasedItems: [
+			{
+				type: Schema.Types.ObjectId,
+				ref: "Item",
+			},
+		],
+		chats: [
+			{
+				type: Schema.Types.ObjectId,
+				ref: "Chat",
+			},
+		],
+		interests: [
+			{
+				type: Schema.Types.ObjectId,
+				ref: "Tag",
+			},
+		],
 	},
-	email: {
-		type: String,
-		required: true,
-		unique: true,
-		match: [/.+@.+\..+/, "Must match an email address!"],
-	},
-	password: {
-		type: String,
-		required: true,
-		minlength: 6,
-	},
-	bookmarkedItems: [
-		{
-			type: Schema.Types.ObjectId,
-			ref: "Item",
+	{
+		methods: {
+			isCorrectPassword: async function (password) {
+				return bcrypt.compare(password, this.password);
+			},
 		},
-	],
-	sellingItems: [
-		{
-			type: Schema.Types.ObjectId,
-			ref: "Item",
-		},
-	],
-	purchasedItems: [
-		{
-			type: Schema.Types.ObjectId,
-			ref: "Item",
-		},
-	],
-	chats: [
-		{
-			type: Schema.Types.ObjectId,
-			ref: "Chat",
-		},
-	],
-	interests: [
-		{
-			type: Schema.Types.ObjectId,
-			ref: "Tag",
-		},
-	],
-});
+	}
+);
 
 userSchema.pre("save", async function (next) {
 	if (this.isNew || this.isModified("password")) {
@@ -58,10 +67,5 @@ userSchema.pre("save", async function (next) {
 	next();
 });
 
-userSchema.methods.isCorrectPassword = async function (password) {
-	return bcrypt.compare(password, this.password);
-};
-
 const User = model("User", userSchema);
-
 module.exports = User;
