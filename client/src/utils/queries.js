@@ -26,6 +26,23 @@ export const QUERY_TAGS = gql`
 	}
 `;
 
+export const QUERY_ALL_ITEMS = gql`
+	{
+		items {
+			_id
+			title
+			photos
+			Location
+			datePosted
+			ask
+			tag {
+				name
+			}
+		}
+	}
+	}
+`;
+
 export const QUERY_SINGLE_ITEM = gql`
 	{
 		items {
