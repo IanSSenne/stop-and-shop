@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./global.scss";
 import { createBrowserRouter, RouterProvider, useParams, useResolvedPath } from "react-router-dom";
 import Index from "./pages";
+import Home from "./pages/Home";
 function Show(props) {
 	const params = useParams();
 	const route = useResolvedPath();
@@ -17,7 +18,7 @@ function Show(props) {
 const router = createBrowserRouter([
 	{
 		path: "/",
-		Component: Index,
+		Component: Home,
 	},
 	{
 		path: "/create",
