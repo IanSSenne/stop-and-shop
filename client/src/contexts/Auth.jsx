@@ -18,11 +18,25 @@ const LOGIN_MUTATION = gql`
 		}
 	}
 `;
+const SIGNUP_MUTATION = gql`
+mutation Mutation($email: String!, $password: String!, $displayName: String!) {
+	addUser(email: $email, password: $password, username: $displayName) {
+		user {
+			displayName
+			_id
+			email
+		}
+		token
+	}
+}
+`;
 export const localStorageKey = "auth_token";
 export const AuthProvider = ({ children }) => {
 	const [token, setToken] = useState(localStorage.getItem(localStorageKey) || null);
-	const [user, setUser] = useState(token && token !== "undefined" && decode(token));
-	const [loginMutation, { data, error, loading }] = useMutation(LOGIN_MUTATION);
+	const [user, setUser] = useState(token && token !== 'undefined' && decode(token));
+	const [loginMutation, { error:logInError, loading: loginLoading }] = useMutation(LOGIN_MUTATION);
+	const [signUpMutation, { error: signUpError, loading: signUpLoading }] = useMutation(SIGNUP_MUTATION);
+
 
 	const login = ({ email, password }) => {
 		return loginMutation({
@@ -43,6 +57,19 @@ export const AuthProvider = ({ children }) => {
 		);
 	};
 
+	const signUp = ({ email, password, displayName }) => {
+		return signUpMutation({
+			variables: {
+				email,
+				password,
+				displayName,
+			},
+		}).then(({ data: { addUser: { user, token } } }) => { 
+			setUser(user);
+			setToken(token);
+			localStorage.setItem(localStorageKey, token);
+		});
+	};
 	const logout = () => {
 		localStorage.removeItem(localStorageKey);
 		setUser(null);
@@ -53,8 +80,9 @@ export const AuthProvider = ({ children }) => {
 		isAuthenticated: !!user,
 		login,
 		logout,
-		error,
-		loading,
+		signUp,
+		error: logInError || signUpError,
+		loading: loginLoading || signUpLoading,
 	};
 
 	return <authContext.Provider value={state}>{children}</authContext.Provider>;
