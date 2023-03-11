@@ -12,15 +12,39 @@ export const LOGIN  = gql`
 `;
 
 export const ADD_ITEM = gql`
-
+    mutation addItem($item: ID!) {
+        addItem(item: $item) {
+            _id
+            title
+            photos
+            Location
+            datePosted
+            tags {
+                tag {
+                    name
+                }
+            }
+        }
+    }
 `;
 
 export const ADD_USER = gql`
-
+    mutation addUser(
+        $firstName: String!
+        $lastName: String!
+        $email: String!
+        $password: String!
+    ) {
+        addUser(
+        firstName: $firstName
+        lastName: $lastName
+        email: $email
+        password: $password
+        ) {
+        token
+        user {
+            _id
+        }
+        }
+    }
 `;
-
-export const REMOVE_ITEM = gql`
-
-`;
-
-export const REMOVE_
