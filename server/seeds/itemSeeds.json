@@ -1,26 +1,26 @@
 [
-    {
-        "title": "Comic Book Collection",
-        "ask": "999.99"
-    },
-    {
-        "title": "Antique Clock",
-        "ask": "12000.00"
-    },
-    {
-        "title": "Apple AirPods Max Space Gray",
-        "ask": "479.99"
-    },
-    {
-        "title": "Rolex Sea-Dweller",
-        "ask": "18000.00"
-    },
-    {
-        "title": "Nike Air Force 1 '07",
-        "ask": "110.00"
-    },
-    {
-        "title": "Baseball Bat",
-        "ask": "119.99"
-    }
+	{
+		"title": "Comic Book Collection",
+		"ask": "999.99"
+	},
+	{
+		"title": "Antique Clock",
+		"ask": "12000.00"
+	},
+	{
+		"title": "Apple AirPods Max Space Gray",
+		"ask": "479.99"
+	},
+	{
+		"title": "Rolex Sea-Dweller",
+		"ask": "18000.00"
+	},
+	{
+		"title": "Nike Air Force 1 '07",
+		"ask": "110.00"
+	},
+	{
+		"title": "Baseball Bat",
+		"ask": "119.99"
+	}
 ]

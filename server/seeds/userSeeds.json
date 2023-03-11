@@ -1,12 +1,12 @@
 [
-    {
-        "displayName":"shopper123",
-        "email": "buybuybuy@buy.com",
-        "password": "Buyeverything99!"
-    },
-    {
-        "displayName":"seller123",
-        "email": "sellsellsell@sell.com",
-        "password": "Selleverything00!"
-    }
+	{
+		"displayName": "shopper123",
+		"email": "buybuybuy@buy.com",
+		"password": "Buyeverything99!"
+	},
+	{
+		"displayName": "seller123",
+		"email": "sellsellsell@sell.com",
+		"password": "Selleverything00!"
+	}
 ]
