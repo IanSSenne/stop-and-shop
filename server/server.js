@@ -32,9 +32,9 @@ if (!process.argv.includes("--production")) {
 if (process.argv.includes("--production")) {
 	app.use(express.static(clientDeploymentPath));
 
-	app.get("*", (req, res) => {
-		res.sendFile("index.html", { root: clientDeploymentPath });
-	});
+	// app.get("*", (req, res) => {
+	// 	res.sendFile("index.html", { root: clientDeploymentPath });
+	// });
 }
 
 const startApolloServer = async () => {

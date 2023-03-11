@@ -4,6 +4,9 @@ import "./global.scss";
 import { createBrowserRouter, RouterProvider, useParams, useResolvedPath } from "react-router-dom";
 import Index from "./pages";
 import Home from "./pages/Home";
+import { AuthProvider } from "./contexts/Auth";
+import { ApolloProvider } from "@apollo/client";
+import { client } from "./util/apolloClient";
 function Show(props) {
 	const params = useParams();
 	const route = useResolvedPath();
@@ -15,6 +18,7 @@ function Show(props) {
 		</>
 	);
 }
+
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -52,6 +56,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
-		<RouterProvider router={router} />
+		<ApolloProvider client={client}>
+			<AuthProvider>
+				<RouterProvider router={router} />
+			</AuthProvider>
+		</ApolloProvider>
 	</React.StrictMode>
 );
