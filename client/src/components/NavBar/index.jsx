@@ -12,6 +12,10 @@ function BpNavbar() {
 				<Button className="bp4-minimal" icon="document" text="Create New Listing" />
 				<Button className="bp4-minimal" icon="document" text="Search" />
 			</Navbar.Group>
+			
+			<Navbar.Group align={Alignment.RIGHT}>
+			<Button className="bp4-minimal" icon="document" text="Login" />
+			</Navbar.Group>
 		</Navbar>
 	);
 }
