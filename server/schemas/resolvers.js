@@ -7,12 +7,22 @@ const resolvers = {
 		user: async (parent, args, context) => {
 			if (context.user) {
 				const user = await User.findById(context.user._id).populate({
-					path: "item",
-					populate: "tag",
-				});
+					path: "bookmarkedItems",
+					populate: {
+						path: "tags"
+					},
+				}).populate({
+					path: "sellingItems",
+					populate: {
+						path: "tags"
+					},
+				})
+				return user
 			}
 		},
 		items: async () => Item.find().populate("tags"),
+
+
 		item: async (parent, { _id }) => {
 			return await Item.findById(_id);
 		},
@@ -22,6 +32,7 @@ const resolvers = {
 		tag: async (parent, { tagId }) => {
 			return await Tag.findById(tagId);
 		},
+		
 	},
 	Mutation: {
 		async addUser(parent, { username, email, password }, context) {

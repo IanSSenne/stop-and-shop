@@ -47,6 +47,7 @@ const typeDefs = gql`
 		tags: [Tag]
 		user: User
 		tag(tagId: ID): Tag
+		sellingitems:[Item]
 	}
 
 	type Auth {
