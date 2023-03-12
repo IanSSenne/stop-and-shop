@@ -1,5 +1,17 @@
 import { gql } from "@apollo/client";
 
+export const QUERY_MY_CHATS = gql`
+	query Query {
+		chats {
+			_id
+			visibleTo {
+				_id
+				displayName
+			}
+		}
+	}
+`;
+
 export const QUERY_ITEMS = gql`
 	query getItems($tag: ID) {
 		items(tag: $tag) {

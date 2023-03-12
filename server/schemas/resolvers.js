@@ -22,6 +22,27 @@ const resolvers = {
 		tag: async (parent, { tagId }) => {
 			return await Tag.findById(tagId);
 		},
+		chats: async (parent, args, context) => {
+			if (context.user) {
+				const user = await User.findById(context.user._id).populate({
+					path: "chats",
+					populate: {
+						path: "visibleTo",
+					},
+				});
+				console.log(JSON.stringify(user.chats));
+				return user.chats;
+			}
+			throw new AuthenticationError("You need to be logged in!");
+		},
+		chat: async (parent, { chatId }, context) => {
+			if (context.user) {
+				const user = await User.findById(context.user._id).populate("chats");
+				const chat = user.chats.find((chat) => chat._id == chatId);
+				return chat;
+			}
+			throw new AuthenticationError("You need to be logged in!");
+		},
 	},
 	Mutation: {
 		async addUser(parent, { username, email, password }, context) {
