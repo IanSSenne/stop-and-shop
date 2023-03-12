@@ -18,15 +18,14 @@ const typeDefs = gql`
 		purchasedItems: [Item]
 		displayName: String
 		email: String
-		Password: String
-		Chats: [Chat]
-		Interests: [Tag]
+		chats: [Chat]
+		interests: [Tag]
 	}
 
 	type Chat {
 		_id: ID
 		visibleTo: [User]
-		Message: [ChatMessage]
+		message: [ChatMessage]
 	}
 
 	type ChatMessage {
