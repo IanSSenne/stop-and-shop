@@ -25,7 +25,7 @@ const typeDefs = gql`
 	type Chat {
 		_id: ID
 		visibleTo: [User]
-		message: [ChatMessage]
+		messages: [ChatMessage]
 	}
 
 	type ChatMessage {

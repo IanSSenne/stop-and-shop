@@ -4,6 +4,13 @@ export const QUERY_MY_CHATS = gql`
 	query Query {
 		chats {
 			_id
+			messages {
+				message
+				from {
+					_id
+				}
+				timestamp
+			}
 			visibleTo {
 				_id
 				displayName

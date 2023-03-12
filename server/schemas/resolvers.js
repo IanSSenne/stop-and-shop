@@ -30,7 +30,6 @@ const resolvers = {
 						path: "visibleTo",
 					},
 				});
-				console.log(JSON.stringify(user.chats));
 				return user.chats;
 			}
 			throw new AuthenticationError("You need to be logged in!");
