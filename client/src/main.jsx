@@ -4,6 +4,9 @@ import "./global.scss";
 import { createBrowserRouter, RouterProvider, useParams, useResolvedPath } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
+import { Profile } from "./pages/Profile";
+import { Create } from "./pages/Create";
+import { Search } from "./pages/Search";
 import { AuthProvider } from "./contexts/Auth";
 import { ApolloProvider } from "@apollo/client";
 import { client } from "./utils/apolloClient";
@@ -26,11 +29,11 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/create",
-		Component: Show,
+		Component: Create,
 	},
 	{
 		path: "/profile",
-		Component: Show,
+		Component: Profile,
 	},
 	{
 		path: "/profile/:id",
@@ -42,7 +45,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/search",
-		Component: Show,
+		Component: Search,
 	},
 	{
 		path: "/login",
