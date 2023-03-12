@@ -1,10 +1,12 @@
 import React from "react";
-import Search from "../components/Search";
+import BpNavbar from "../components/NavBar";
+import Header from "../components/Header";
 
-const Search = () => {
+export const Search = () => {
 	return (
-		<div>
-			<Search />
-		</div>
+		<>
+			<Header/>
+			<BpNavbar />
+		</>
 	);
 };
