@@ -36,7 +36,12 @@ const resolvers = {
 		},
 		chat: async (parent, { chatId }, context) => {
 			if (context.user) {
-				const user = await User.findById(context.user._id).populate("chats");
+				const user = await User.findById(context.user._id).populate({
+					path: "chats",
+					populate: {
+						path: "visibleTo",
+					},
+				});
 				const chat = user.chats.find((chat) => chat._id == chatId);
 				return chat;
 			}
@@ -66,6 +71,22 @@ const resolvers = {
 		},
 		async removeItem(parent, { itemId }) {
 			return Item.findOneAndDelete({ _id: itemId });
+		},
+		async sendMessage(parent, { chatId, message }, context) {
+			if (context.user) {
+				const user = await User.findById(context.user._id).populate("chats", {});
+				const chat = user.chats.find((chat) => chat._id == chatId);
+				if (!chat) throw new Error("Chat not found");
+				chat.messages.push({
+					message,
+					from: user,
+					timestamp: new Date(),
+					offer: 0,
+				});
+				await chat.save();
+				return "OK";
+			}
+			throw new AuthenticationError("You need to be logged in!");
 		},
 	},
 };

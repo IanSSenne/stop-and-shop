@@ -60,6 +60,7 @@ const typeDefs = gql`
 		addItem(title: String, photos: [String], Location: String, datePosted: String, ask: Float): Item
 		login(email: String!, password: String!): Auth
 		removeItem(itemId: ID): Item
+		sendMessage(chatId: ID, message: String): String
 	}
 `;
 
