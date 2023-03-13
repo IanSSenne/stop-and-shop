@@ -6,13 +6,24 @@ const resolvers = {
 	Query: {
 		user: async (parent, args, context) => {
 			if (context.user) {
-				const user = await User.findById(context.user._id).populate({
-					path: "item",
-					populate: "tag",
-				});
+				const user = await User.findById(context.user._id)
+					.populate({
+						path: "bookmarkedItems",
+						populate: {
+							path: "tags",
+						},
+					})
+					.populate({
+						path: "sellingItems",
+						populate: {
+							path: "tags",
+						},
+					});
+				return user;
 			}
 		},
 		items: async () => Item.find().populate("tags"),
+
 		item: async (parent, { _id }) => {
 			return await Item.findById(_id);
 		},

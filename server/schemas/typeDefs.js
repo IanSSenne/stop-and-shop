@@ -49,6 +49,7 @@ const typeDefs = gql`
 		tag(tagId: ID): Tag
 		chats: [Chat]
 		chat(chatId: ID): Chat
+    sellingitems: [Item]
 	}
 
 	type Auth {
