@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../contexts/Auth";
 import { z } from "zod";
-import BpNavbar from "../components/NavBar";
+
 import Header from "../components/Header";
 
 // TODO: remove this in favor of a standardized input component
@@ -130,36 +130,35 @@ export const Login = () => {
 	};
 	return (
 		<>
-		<Header/>
-		<BpNavbar />
-		<div>
+			<Header />
 			<div>
-				<button onClick={() => setFormMode("login")}>Login</button>
-				<button onClick={() => setFormMode("signup")}>Sign Up</button>
+				<div>
+					<button onClick={() => setFormMode("login")}>Login</button>
+					<button onClick={() => setFormMode("signup")}>Sign Up</button>
+				</div>
+				{formMode === "login" && (
+					<form onSubmit={signIn}>
+						<Input type="email" name="email" label="Email" />
+						<ErrorMessage errors={error?.errors || []} path={["email"]} />
+						<Input type="password" name="password" label="Password" />
+						<ErrorMessage errors={error?.errors || []} path={["password"]} />
+						<button type="submit">Login</button>
+					</form>
+				)}
+				{formMode === "signup" && (
+					<form onSubmit={signUp}>
+						<Input type="email" name="email" label="Email" />
+						<ErrorMessage errors={error?.errors || []} path={["email"]} />
+						<Input type="password" name="password" label="Password" />
+						<ErrorMessage errors={error?.errors || []} path={["password"]} />
+						<Input type="password" name="confirmPassword" label="Confirm Password" />
+						<ErrorMessage errors={error?.errors || []} path={["confirmPassword"]} />
+						<Input type="text" name="displayName" label="Display Name" />
+						<ErrorMessage errors={error?.errors || []} path={["displayName"]} />
+						<button type="submit">Sign Up</button>
+					</form>
+				)}
 			</div>
-			{formMode === "login" && (
-				<form onSubmit={signIn}>
-					<Input type="email" name="email" label="Email" />
-					<ErrorMessage errors={error?.errors || []} path={["email"]} />
-					<Input type="password" name="password" label="Password" />
-					<ErrorMessage errors={error?.errors || []} path={["password"]} />
-					<button type="submit">Login</button>
-				</form>
-			)}
-			{formMode === "signup" && (
-				<form onSubmit={signUp}>
-					<Input type="email" name="email" label="Email" />
-					<ErrorMessage errors={error?.errors || []} path={["email"]} />
-					<Input type="password" name="password" label="Password" />
-					<ErrorMessage errors={error?.errors || []} path={["password"]} />
-					<Input type="password" name="confirmPassword" label="Confirm Password" />
-					<ErrorMessage errors={error?.errors || []} path={["confirmPassword"]} />
-					<Input type="text" name="displayName" label="Display Name" />
-					<ErrorMessage errors={error?.errors || []} path={["displayName"]} />
-					<button type="submit">Sign Up</button>
-				</form>
-			)}
-		</div>
 		</>
 	);
 };
