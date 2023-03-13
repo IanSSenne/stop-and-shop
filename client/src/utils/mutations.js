@@ -38,3 +38,9 @@ export const ADD_USER = gql`
 		}
 	}
 `;
+
+export const SEND_MESSAGE = gql`
+	mutation SendMessage($chatId: ID, $message: String) {
+		sendMessage(chatId: $chatId, message: $message)
+	}
+`;

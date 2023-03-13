@@ -25,7 +25,7 @@ const typeDefs = gql`
 	type Chat {
 		_id: ID
 		visibleTo: [User]
-		message: [ChatMessage]
+		messages: [ChatMessage]
 	}
 
 	type ChatMessage {
@@ -47,7 +47,9 @@ const typeDefs = gql`
 		tags: [Tag]
 		user: User
 		tag(tagId: ID): Tag
-		sellingitems: [Item]
+		chats: [Chat]
+		chat(chatId: ID): Chat
+    sellingitems: [Item]
 	}
 
 	type Auth {
@@ -59,6 +61,7 @@ const typeDefs = gql`
 		addItem(title: String, photos: [String], Location: String, datePosted: String, ask: Float): Item
 		login(email: String!, password: String!): Auth
 		removeItem(itemId: ID): Item
+		sendMessage(chatId: ID, message: String): String
 	}
 `;
 

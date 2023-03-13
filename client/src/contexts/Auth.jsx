@@ -37,6 +37,8 @@ export const AuthProvider = ({ children }) => {
 	const [loginMutation, { error: logInError, loading: loginLoading }] = useMutation(LOGIN_MUTATION);
 	const [signUpMutation, { error: signUpError, loading: signUpLoading }] = useMutation(SIGNUP_MUTATION);
 
+		
+
 	const login = ({ email, password }) => {
 		return loginMutation({
 			variables: {
@@ -80,6 +82,9 @@ export const AuthProvider = ({ children }) => {
 		setUser(null);
 	};
 
+	if (user && user.exp < Date.now() / 1000) {
+		logout();
+	}
 	const state = {
 		user,
 		isAuthenticated: !!user,
