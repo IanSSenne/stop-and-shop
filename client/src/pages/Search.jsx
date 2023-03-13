@@ -5,7 +5,7 @@ import Header from "../components/Header";
 export const Search = () => {
 	return (
 		<>
-			<Header/>
+			<Header />
 			<BpNavbar />
 		</>
 	);

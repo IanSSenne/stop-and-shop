@@ -11,13 +11,13 @@ export const Profile = () => {
 	console.log(data);
 	return (
 		<>
-			<Header/>
+			<Header />
 			<BpNavbar />
 			{/* <SellingItems/> */}
 			{loading ? <h1>loading...</h1> : data.user.sellingItems.map((item) => <Item {...item} key={item._id} />)}
 			{/* Bookmarked Items */}
 			{loading ? <h1>loading...</h1> : data.user.bookmarkedItems.map((item) => <Item {...item} key={item._id} />)}
-		{/* (
+			{/* (
 			<div>
 				<h2>Your Listings</h2>
 				<UserItems />

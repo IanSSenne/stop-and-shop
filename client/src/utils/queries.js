@@ -63,60 +63,60 @@ export const QUERY_SINGLE_ITEM = gql`
 `;
 
 export const QUERY_USER = gql`
-{
-	user {
-	  _id
-	  bookmarkedItems {
-		_id
-		ask
-		datePosted
-		location
-		photos
-		tags {
-		  _id
-		  color
-		  name
+	{
+		user {
+			_id
+			bookmarkedItems {
+				_id
+				ask
+				datePosted
+				location
+				photos
+				tags {
+					_id
+					color
+					name
+				}
+				title
+			}
+			displayName
+			email
+			interests {
+				_id
+				color
+				name
+			}
+			purchasedItems {
+				_id
+				ask
+				datePosted
+				location
+				photos
+				title
+				tags {
+					_id
+					color
+					name
+				}
+			}
+			sellingItems {
+				_id
+				ask
+				datePosted
+				location
+				photos
+				tags {
+					_id
+					color
+					name
+				}
+				title
+			}
+			chats {
+				_id
+			}
 		}
-		title
-	  }
-	  displayName
-	  email
-	  interests {
-		_id
-		color
-		name
-	  }
-	  purchasedItems {
-		_id
-		ask
-		datePosted
-		location
-		photos
-		title
-		tags {
-		  _id
-		  color
-		  name
-		}
-	  }
-	  sellingItems {
-		_id
-		ask
-		datePosted
-		location
-		photos
-		tags {
-		  _id
-		  color
-		  name
-		}
-		title
-	  }
-	  chats {
-		_id
-	  }
 	}
-  }
 `;
 
 // gql`
@@ -128,18 +128,17 @@ export const QUERY_USER = gql`
 // 		purchasedItems
 // 		displayName
 // 		email
-		// Chats {
-		// 	chat {
-		// 		_id
-		// 	}
-		// }
-		// Interests {
-		// 	tag {
-		// 		_id
-		// 		name
-		// 	}
-		// }
+// Chats {
+// 	chat {
+// 		_id
+// 	}
+// }
+// Interests {
+// 	tag {
+// 		_id
+// 		name
+// 	}
+// }
 // 	}
 // }
 // `;
-
