@@ -12,6 +12,7 @@
 		"@apollo/client": "^3.7.10",
 		"@blueprintjs/core": "^4.17.6",
 		"@blueprintjs/icons": "^4.14.3",
+		"@blueprintjs/popover2": "^1.13.10",
 		"clsx": "^1.2.1",
 		"geolocator": "^2.1.5",
 		"graphql": "^16.6.0",
