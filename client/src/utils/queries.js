@@ -19,6 +19,25 @@ export const QUERY_MY_CHATS = gql`
 	}
 `;
 
+export const QUERY_CHAT = gql`
+	query Query($chatId: ID) {
+		chat(chatId: $chatId) {
+			_id
+			messages {
+				message
+				from {
+					_id
+				}
+				timestamp
+			}
+			visibleTo {
+				_id
+				displayName
+			}
+		}
+	}
+`;
+
 export const QUERY_ITEMS = gql`
 	query getItems($tag: ID) {
 		items(tag: $tag) {
