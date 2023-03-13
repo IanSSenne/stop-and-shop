@@ -1,12 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Navbar, Button, Alignment } from "@blueprintjs/core";
 
 function BpNavbar() {
+	const navigate = useNavigate();
 	return (
 		<Navbar>
 			<Navbar.Group align={Alignment.LEFT}>
-				<Navbar.Heading>Blueprint</Navbar.Heading>
+				<Navbar.Heading>
+					<Button minimal={true} onClick={()=>navigate("/")}>
+						<strong style={{fontSize:'1.5rem'}}>
+							Stop-n-Shop
+						</strong>
+					</Button>
+				</Navbar.Heading>
 				<Navbar.Divider />
 				<Link to="/">
 					<Button className="bp4-minimal" icon="home" text="Home" />
