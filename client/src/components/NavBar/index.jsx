@@ -1,17 +1,18 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Navbar, Button, Alignment } from "@blueprintjs/core";
+import { useAuth } from "../../contexts/Auth";
 
 function BpNavbar() {
 	const navigate = useNavigate();
+	const location = useLocation().pathname
+	const auth = useAuth();
 	return (
 		<Navbar>
 			<Navbar.Group align={Alignment.LEFT}>
 				<Navbar.Heading>
-					<Button minimal={true} onClick={()=>navigate("/")}>
-						<strong style={{fontSize:'1.5rem'}}>
-							Stop-n-Shop
-						</strong>
+					<Button minimal={true} onClick={() => navigate("/")}>
+						<strong style={{ fontSize: "1.5rem" }}>Stop-n-Shop</strong>
 					</Button>
 				</Navbar.Heading>
 				<Navbar.Divider />
@@ -30,9 +31,19 @@ function BpNavbar() {
 			</Navbar.Group>
 
 			<Navbar.Group align={Alignment.RIGHT}>
-				<Link to="/login">
-					<Button className="bp4-minimal" icon="log-in" text="Login" />
-				</Link>
+				{auth.user ? (
+					<Button
+						onClick={() => {
+							auth.logout();
+						}} rightIcon={"log-out"}
+					minimal>
+						Logout
+					</Button>
+				) : (
+					<Link to={`/login?return=${location}`}>
+						<Button minimal icon="log-in" text="Login" />
+					</Link>
+				)}
 			</Navbar.Group>
 		</Navbar>
 	);

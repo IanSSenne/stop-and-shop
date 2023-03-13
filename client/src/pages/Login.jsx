@@ -3,6 +3,7 @@ import { useAuth } from "../contexts/Auth";
 import { z } from "zod";
 
 import Header from "../components/Header";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 // TODO: remove this in favor of a standardized input component
 function Input(props) {
@@ -94,6 +95,10 @@ const signUpValidator = z
 
 export const Login = () => {
 	const auth = useAuth();
+	const navigate = useNavigate();
+	const [params] = useSearchParams({ return: "/" })
+	
+	console.log(params.get("return"))
 
 	const [error, setError] = useState(null);
 	const [formMode, setFormMode] = useState("login");
@@ -108,6 +113,7 @@ export const Login = () => {
 		if (result.success) {
 			setError(null);
 			auth.login(result.data);
+			navigate(params.get("return"))
 		} else {
 			setError(result.error);
 		}
@@ -124,6 +130,7 @@ export const Login = () => {
 		if (result.success) {
 			setError(null);
 			auth.signUp(result.data);
+			navigate(params.get("return"))
 		} else {
 			setError(result.error);
 		}
