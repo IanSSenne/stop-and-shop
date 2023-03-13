@@ -1,7 +1,6 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { QUERY_USER } from "../utils/queries";
-import BpNavbar from "../components/NavBar";
 import Header from "../components/Header";
 import Item from "../components/Item";
 // import SellingItems from "../components/SellingItems";
@@ -12,7 +11,6 @@ export const Profile = () => {
 	return (
 		<>
 			<Header />
-			<BpNavbar />
 			{/* <SellingItems/> */}
 			{loading ? <h1>loading...</h1> : data.user.sellingItems.map((item) => <Item {...item} key={item._id} />)}
 			{/* Bookmarked Items */}

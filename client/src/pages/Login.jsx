@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../contexts/Auth";
 import { z } from "zod";
-import BpNavbar from "../components/NavBar";
+
 import Header from "../components/Header";
 
 // TODO: remove this in favor of a standardized input component
@@ -131,7 +131,6 @@ export const Login = () => {
 	return (
 		<>
 			<Header />
-			<BpNavbar />
 			<div>
 				<div>
 					<button onClick={() => setFormMode("login")}>Login</button>
