@@ -6,12 +6,6 @@ import Navbar from "../NavBar";
 function Header() {
 	return (
 		<header>
-			
-			<div>
-				<Link to="/">
-					<h1>Stop-n-Shop</h1>
-				</Link>
-			</div>
 			<Navbar/>
 		</header>
 
