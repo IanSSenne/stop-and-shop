@@ -10,7 +10,19 @@ $chat-z-index: 1000;
 		z-index: $chat-z-index;
 		.card{
 			min-width: 400px;
-			min-height: 500px;
+			height: 500px;
+			display: flex;
+			flex-direction: column;
+			.body{
+				display: flex;
+				flex-direction: column;
+				flex-grow: 1;
+				.users{
+					display: flex;
+					flex-direction: column;
+					flex-grow: 1;
+				}
+			}
 			.header{
 				display: flex;
 				justify-content: space-between;
@@ -26,9 +38,6 @@ $chat-z-index: 1000;
 					font-weight: 600;
 				}
 			}
-			.body{
-				
-			}
 		}
 }
 
@@ -37,4 +46,36 @@ $chat-z-index: 1000;
 		bottom: 10px;
 		right: 10px;
 		cursor: pointer;
+}
+.chat{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	.messages{
+		display: flex;
+		flex-direction: column;
+		overflow-y: scroll;
+		height: 387px;
+		.message{
+			.messageContent{
+				border-radius: 10px;
+				padding: 10px;
+			}
+			margin-top: 10px;
+			&.self{
+				align-self: flex-end;
+				.messageContent{
+					background-color: #e0e0e0;
+				}
+			}
+			&.other{
+				align-self: flex-start;
+				.messageContent{
+					background-color: #f0f0f0;
+				}
+			}
+		}
+	}
+
+
 }
