@@ -1,0 +1,23 @@
+@import "@blueprintjs/core/lib/scss/variables";
+
+.rule{
+    background: $gray5;
+    color: $dark-gray5;
+    border: 2px $turquoise1;
+        .card{
+
+        }
+}
+
+.root{
+    .card{
+
+        .body{
+
+            .title{
+
+
+            }
+        }
+    }
+}
