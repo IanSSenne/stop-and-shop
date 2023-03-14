@@ -7,7 +7,7 @@ import { QUERY_TAGS } from "../../utils/queries";
 
 function Results() {
     return (
-
+            null
     );
 }
 

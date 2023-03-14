@@ -1,5 +1,4 @@
 import React from "react";
-import React from "react";
 import { InputGroup, Icon } from "@blueprintjs/core";
 import Results from "../Results";
 
