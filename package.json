@@ -17,5 +17,6 @@
 		"install": "cd client && yarn install && cd ../server && yarn install",
 		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\" --ignore-path .prettierignore",
 		"seed": "cd server && yarn seed"
-	}
+	},
+	"dependencies": {}
 }
