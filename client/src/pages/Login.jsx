@@ -96,9 +96,9 @@ const signUpValidator = z
 export const Login = () => {
 	const auth = useAuth();
 	const navigate = useNavigate();
-	const [params] = useSearchParams({ return: "/" })
-	
-	console.log(params.get("return"))
+	const [params] = useSearchParams({ return: "/" });
+
+	console.log(params.get("return"));
 
 	const [error, setError] = useState(null);
 	const [formMode, setFormMode] = useState("login");
@@ -113,7 +113,7 @@ export const Login = () => {
 		if (result.success) {
 			setError(null);
 			auth.login(result.data);
-			navigate(params.get("return"))
+			navigate(params.get("return"));
 		} else {
 			setError(result.error);
 		}
@@ -130,7 +130,7 @@ export const Login = () => {
 		if (result.success) {
 			setError(null);
 			auth.signUp(result.data);
-			navigate(params.get("return"))
+			navigate(params.get("return"));
 		} else {
 			setError(result.error);
 		}

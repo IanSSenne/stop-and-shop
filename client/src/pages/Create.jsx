@@ -7,6 +7,11 @@ export const Create = () => {
 	return (
 		<>
 			<Header />
+
+			{/* <div>
+		<h2>List Your Item:</h2>
+		<CreateForm />
+		</div> */}
 			<CreateForm />
 		</>
 	);

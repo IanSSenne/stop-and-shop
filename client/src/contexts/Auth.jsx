@@ -37,8 +37,6 @@ export const AuthProvider = ({ children }) => {
 	const [loginMutation, { error: logInError, loading: loginLoading }] = useMutation(LOGIN_MUTATION);
 	const [signUpMutation, { error: signUpError, loading: signUpLoading }] = useMutation(SIGNUP_MUTATION);
 
-		
-
 	const login = ({ email, password }) => {
 		return loginMutation({
 			variables: {

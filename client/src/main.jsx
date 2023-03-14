@@ -7,6 +7,7 @@ import { Login } from "./pages/Login";
 import { Profile } from "./pages/Profile";
 import { Create } from "./pages/Create";
 import { Search } from "./pages/Search";
+import { ItemDesc } from "./pages/Item";
 import { AuthProvider } from "./contexts/Auth";
 import { ApolloProvider } from "@apollo/client";
 import { client } from "./utils/apolloClient";
@@ -54,7 +55,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/view/:id",
-		Component: Show,
+		Component: ItemDesc,
 	},
 ]);
 

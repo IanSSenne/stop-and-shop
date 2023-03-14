@@ -3,13 +3,19 @@ import { useMutation } from '@apollo/client';
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { FileInput, FormGroup, InputGroup, TextArea, ButtonGroup, Button } from '@blueprintjs/core'
 import { ADD_ITEM } from '../../utils/mutations';
+import { z } from "zod";
  
 function CreateForm () {
-    const [item, setItem ] = useState();
+    
+
+    const createFormValidator = z.object({
+        price: z.number(),
+        tags: z.string()
+    })
 
     function saveItem (event) {
         event.preventDefault();
-
+        const navigator = useNavigate();
         const [createNewItem, { loading: creatingItem }] = useMutation(ADD_ITEM);
 
         const formData = new FormData(event.target.value);
@@ -30,7 +36,7 @@ function CreateForm () {
         createNewItem({
             variables: itemData,
         }).then(() => {
-            event.target.useNavigate("/profile");
+            event.target.navigator("/profile");
         });
     }
 
@@ -39,7 +45,7 @@ function CreateForm () {
             <h1> Create Form</h1>
             <FormGroup>
                 <form onSubmit={() => {
-                    createNewItem();
+                    saveItem();
                 }}>
                     <h3>Item Title</h3>
                     <InputGroup
