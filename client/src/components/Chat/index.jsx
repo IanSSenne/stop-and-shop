@@ -56,7 +56,7 @@ export const Chat = wrapAuthenticationCheck(function chat() {
 		? selectedChat.visibleTo.find((user) => user._id !== auth.user.data._id).displayName
 		: null;
 
-	if(!auth.user.data) return null; // hide the chat until we have a user
+	if (!auth.user.data) return null; // hide the chat until we have a user
 	const myUserId = auth.user.data._id;
 
 	return isOpen ? (

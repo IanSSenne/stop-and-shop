@@ -5,7 +5,7 @@ import { useAuth } from "../../contexts/Auth";
 
 function BpNavbar() {
 	const navigate = useNavigate();
-	const location = useLocation().pathname
+	const location = useLocation().pathname;
 	const auth = useAuth();
 	return (
 		<Navbar>
@@ -35,8 +35,9 @@ function BpNavbar() {
 					<Button
 						onClick={() => {
 							auth.logout();
-						}} rightIcon={"log-out"}
-					minimal>
+						}}
+						rightIcon={"log-out"}
+						minimal>
 						Logout
 					</Button>
 				) : (

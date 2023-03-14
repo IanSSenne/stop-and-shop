@@ -12,7 +12,6 @@ export const Home = () => {
 	return (
 		<>
 			<Header />
-			
 
 			{loading ? <h1>loading...</h1> : data.items.map((item) => <Item {...item} key={item._id} />)}
 		</>
