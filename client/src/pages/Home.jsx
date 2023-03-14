@@ -3,7 +3,7 @@ import React from "react";
 import { useQuery } from "@apollo/client";
 import { QUERY_ALL_ITEMS } from "../utils/queries";
 import Item from "../components/Item";
-import BpNavbar from "../components/NavBar";
+
 import Header from "../components/Header";
 
 export const Home = () => {
@@ -11,7 +11,7 @@ export const Home = () => {
 	return (
 		<>
 			<Header />
-			<BpNavbar />
+			
 
 			{loading ? <h1>loading...</h1> : data.items.map((item) => <Item {...item} key={item._id} />)}
 		</>

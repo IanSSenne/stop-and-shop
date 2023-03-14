@@ -1,5 +1,43 @@
 import { gql } from "@apollo/client";
 
+export const QUERY_MY_CHATS = gql`
+	query Query {
+		chats {
+			_id
+			messages {
+				message
+				from {
+					_id
+				}
+				timestamp
+			}
+			visibleTo {
+				_id
+				displayName
+			}
+		}
+	}
+`;
+
+export const QUERY_CHAT = gql`
+	query Query($chatId: ID) {
+		chat(chatId: $chatId) {
+			_id
+			messages {
+				message
+				from {
+					_id
+				}
+				timestamp
+			}
+			visibleTo {
+				_id
+				displayName
+			}
+		}
+	}
+`;
+
 export const QUERY_ITEMS = gql`
 	query getItems($tag: ID) {
 		items(tag: $tag) {
@@ -66,23 +104,79 @@ export const QUERY_USER = gql`
 	{
 		user {
 			_id
-			bookmarkedItems
-			sellingItems
-			purchasedItems
-			displayName
-			email
-			password
-			Chats {
-				chat {
+			bookmarkedItems {
+				_id
+				ask
+				datePosted
+				location
+				photos
+				tags {
 					_id
-				}
-			}
-			Interests {
-				tag {
-					_id
+					color
 					name
 				}
+				title
+			}
+			displayName
+			email
+			interests {
+				_id
+				color
+				name
+			}
+			purchasedItems {
+				_id
+				ask
+				datePosted
+				location
+				photos
+				title
+				tags {
+					_id
+					color
+					name
+				}
+			}
+			sellingItems {
+				_id
+				ask
+				datePosted
+				location
+				photos
+				tags {
+					_id
+					color
+					name
+				}
+				title
+			}
+			chats {
+				_id
 			}
 		}
 	}
 `;
+
+// gql`
+// {
+// 	user {
+// 		_id
+// 		bookmarkedItems
+// 		sellingItems
+// 		purchasedItems
+// 		displayName
+// 		email
+// Chats {
+// 	chat {
+// 		_id
+// 	}
+// }
+// Interests {
+// 	tag {
+// 		_id
+// 		name
+// 	}
+// }
+// 	}
+// }
+// `;

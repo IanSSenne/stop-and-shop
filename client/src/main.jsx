@@ -10,6 +10,7 @@ import { Search } from "./pages/Search";
 import { AuthProvider } from "./contexts/Auth";
 import { ApolloProvider } from "@apollo/client";
 import { client } from "./utils/apolloClient";
+import { Chat } from "./components/Chat";
 function Show(props) {
 	const params = useParams();
 	const route = useResolvedPath();
@@ -62,6 +63,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 		<ApolloProvider client={client}>
 			<AuthProvider>
 				<RouterProvider router={router} />
+				<Chat></Chat>
 			</AuthProvider>
 		</ApolloProvider>
 	</React.StrictMode>
