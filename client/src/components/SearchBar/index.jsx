@@ -4,16 +4,10 @@ import Results from "../Results";
 
 function BpSearchBar() {
 	return (
-        <>
-            <InputGroup
-                placeholder="Search"
-                leftElement={<Icon icon="search"/>}
-                type= "text"
-            />
-            <Results 
-            
-            />
-        </>
+		<>
+			<InputGroup placeholder="Search" leftElement={<Icon icon="search" />} type="text" />
+			<Results />
+		</>
 	);
 }
 
