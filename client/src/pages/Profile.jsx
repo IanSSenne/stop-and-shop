@@ -7,7 +7,6 @@ import Item from "../components/Item";
 
 export const Profile = () => {
 	const { loading, data } = useQuery(QUERY_USER);
-	console.log(data);
 	return (
 		<>
 			<Header />
