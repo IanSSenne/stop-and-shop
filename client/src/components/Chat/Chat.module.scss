@@ -1,81 +1,78 @@
-
 $chat-z-index: 1000;
 
-.root{
-		display:fixed;
-		bottom: 0px;
-		right: 0px;
-		top: unset;
-		left: unset;
-		z-index: $chat-z-index;
-		.card{
-			min-width: 400px;
-			height: 500px;
+.root {
+	display: fixed;
+	bottom: 0px;
+	right: 0px;
+	top: unset;
+	left: unset;
+	z-index: $chat-z-index;
+	.card {
+		min-width: 400px;
+		height: 500px;
+		display: flex;
+		flex-direction: column;
+		.body {
 			display: flex;
 			flex-direction: column;
-			.body{
+			flex-grow: 1;
+			.users {
 				display: flex;
 				flex-direction: column;
 				flex-grow: 1;
-				.users{
-					display: flex;
-					flex-direction: column;
-					flex-grow: 1;
-				}
-			}
-			.header{
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				border-bottom: 1px solid #e0e0e0;
-				.title{
-					display: flex;
-					align-items: center;
-					.icon{
-						margin-right: 10px;
-					}
-					font-size: 1.5rem;
-					font-weight: 600;
-				}
 			}
 		}
+		.header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-bottom: 1px solid #e0e0e0;
+			.title {
+				display: flex;
+				align-items: center;
+				.icon {
+					margin-right: 10px;
+				}
+				font-size: 1.5rem;
+				font-weight: 600;
+			}
+		}
+	}
 }
 
-.openIcon{
-		position: absolute;
-		bottom: 10px;
-		right: 10px;
-		cursor: pointer;
+.openIcon {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	cursor: pointer;
 }
-.chat{
+.chat {
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
-	.messages{
+	.messages {
 		display: flex;
 		flex-direction: column;
 		overflow-y: scroll;
 		height: 387px;
-		.message{
-			.messageContent{
+		.message {
+			.messageContent {
 				border-radius: 10px;
 				padding: 10px;
 			}
 			margin-top: 10px;
-			&.self{
+			&.self {
 				align-self: flex-end;
-				.messageContent{
+				.messageContent {
 					background-color: #e0e0e0;
 				}
 			}
-			&.other{
+			&.other {
 				align-self: flex-start;
-				.messageContent{
+				.messageContent {
 					background-color: #f0f0f0;
 				}
 			}
 		}
 	}
-
-
 }

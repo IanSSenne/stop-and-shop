@@ -83,18 +83,18 @@ export const QUERY_ALL_ITEMS = gql`
 `;
 
 export const QUERY_SINGLE_ITEM = gql`
-	{
-		items {
+	query Query($id: ID) {
+		item(_id: $id) {
 			_id
-			title
-			photos
-			Location
-			datePosted
 			ask
-			tag {
-				_id
+			datePosted
+			location
+			photos
+			title
+			tags {
 				name
 				color
+				_id
 			}
 		}
 	}

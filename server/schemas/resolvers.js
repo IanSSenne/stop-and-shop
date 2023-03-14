@@ -25,7 +25,7 @@ const resolvers = {
 		items: async () => Item.find().populate("tags"),
 
 		item: async (parent, { _id }) => {
-			return await Item.findById(_id);
+			return await Item.findById(_id).populate("tags");
 		},
 		tags: async () => {
 			return Tag.find();
