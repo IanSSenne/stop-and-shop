@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"repository": "git@github.com:IanSSenne/stop-n-shop.git",
-	"author": "Ian Senne <ian@iansenne.com>",
+	"author": "Ian Senne <ian@iansenne.com>, John Ho <johnho8788@gmail.com>, Michael Reyna <25.27.reyna@gmail.com>",
 	"license": "MIT",
 	"devDependencies": {
 		"@marp-team/marp-cli": "^2.4.0",
