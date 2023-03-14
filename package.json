@@ -20,10 +20,11 @@
 		"start:dev": "concurrently \"cd server && yarn start:dev\" \"cd client && yarn dev\"",
 		"start": "cd server && yarn start",
 		"build:client": "cd client && yarn build",
-		"build": "yarn build:client",
+		"build": "yarn build:client && yarn build:presentation",
+		"build:presentation": "marp --html PRESENTATION.md --output server/public/presentation.html",
 		"install": "cd client && yarn install && cd ../server && yarn install",
 		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\" --ignore-path .prettierignore",
 		"seed": "cd server && yarn seed",
-		"presentation": "marp --html PRESENTATION.md --output PRESENTATION.html && serve PRESENTATION.html"
+		"presentation": "yarn build:presentation && serve server/public/presentation.html"
 	}
 }
