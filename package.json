@@ -9,7 +9,8 @@
 		"@marp-team/marp-cli": "^2.4.0",
 		"concurrently": "^7.6.0",
 		"prettier": "^2.8.4",
-		"serve": "^14.2.0"
+		"serve": "^14.2.0",
+		"vite": "^4.1.0"
 	},
 	"scripts": {
 		"start:dev": "concurrently \"cd server && yarn start:dev\" \"cd client && yarn dev\"",
