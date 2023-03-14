@@ -8,6 +8,7 @@ import Header from "../components/Header";
 
 export const Home = () => {
 	const { loading, data } = useQuery(QUERY_ALL_ITEMS);
+	console.log(data);
 	return (
 		<>
 			<Header />
