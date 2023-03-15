@@ -6,9 +6,12 @@ const { typeDefs, resolvers } = require("./schemas");
 const db = require("./config/connection");
 const app = express();
 const PORT = process.env.PORT || 3000;
-
+if (process.argv.includes("--production")) {
+	process.env.NODE_ENV = "production";
+}
 const clientDeploymentPath = "../client/dist";
-
+console.log("NODE_ENV", process.env.NODE_ENV);
+console.log("INTROSPECTION", process.env.NODE_ENV !== "production");
 const server = new ApolloServer({
 	typeDefs,
 	resolvers,
@@ -19,7 +22,7 @@ const server = new ApolloServer({
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-if (!process.argv.includes("--production")) {
+if (process.env.NODE_ENV !== "production") {
 	app.use((req, res, next) => {
 		res.header("Access-Control-Allow-Origin", "*");
 		res.header("Access-Control-Allow-Headers", "*");
@@ -29,13 +32,15 @@ if (!process.argv.includes("--production")) {
 	});
 }
 
-if (process.argv.includes("--production")) {
+if (process.env.NODE_ENV === "production") {
 	app.use(express.static(clientDeploymentPath));
 
 	// app.get("*", (req, res) => {
 	// 	res.sendFile("index.html", { root: clientDeploymentPath });
 	// });
 }
+
+app.use(express.static(path.join(__dirname, "public")));
 
 const startApolloServer = async () => {
 	await server.start();
