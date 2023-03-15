@@ -1,4 +1,4 @@
-# Stop=n-Shop
+# Stop-n-Shop
 
 ## Description
 
@@ -18,22 +18,22 @@
 | Technology Used         | Resource URL           | 
 | ------------- |:-------------:| 
 | SASS  |  https://sass-lang.com/   | 
-| JSX  |     |   
-| Git  |     |  
-| yarn |     |
-| Vite |     |
-| React |     |
-| Blueprint |     |
-| Marp |     |
-| JWT |     |
-| GraphQL |     |
-| Mongoose |     |
-| BCrypt |     |
-| Express |     |
-| ZOD |     |
-| clsx |     |
-| geolocator |     |
-| Cloudinary |     |
+| JSX  |  https://reactjs.org/docs/introducing-jsx.html   |   
+| Git  |  https://github.com/   |  
+| yarn |  https://yarnpkg.com/   |
+| Vite |  https://vitejs.dev/   |
+| React | https://reactjs.org/    |
+| Blueprint | https://blueprintjs.com/    |
+| Marp |  https://marp.app/   |
+| JWT | https://jwt.io/    |
+| GraphQL | https://graphql.org/    |
+| Mongoose | https://www.npmjs.com/package/mongoose    |
+| BCrypt | https://www.npmjs.com/package/bcrypt    |
+| Express |  https://expressjs.com/   |
+| ZOD | https://zod.dev/    |
+| clsx | https://www.npmjs.com/package/clsx    |
+| geolocator |  https://www.npmjs.com/package/geolocator   |
+| Cloudinary |  https://www.npmjs.com/package/cloudinary   |
 
 ## Learning Points
 
@@ -42,19 +42,19 @@
 ## Contributer Info
 
 ### Ian Senne
-[LinkedIn]()
+[LinkedIn](https://www.linkedin.com/in/ian-senne-7b36801b2/)
 
-[GitHub]()
+[GitHub](https://github.com/IanSSenne)
 
 ### John Ho
-[LinkedIn]()
+[LinkedIn](https://www.linkedin.com/in/john-ho97/)
 
-[GitHub]()
+[GitHub](https://github.com/SpectreKilo)
 
 ### Michael Reyna
-[LinkedIn]()
+[LinkedIn](https://www.linkedin.com/in/michael-reyna-35b597245/)
 
-[GitHub]()
+[GitHub](https://github.com/michaelreyna25)
 
 ## Credits 
 
