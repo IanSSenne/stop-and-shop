@@ -25,6 +25,8 @@ html: true
 - Loves to learn new things
 
 
+
+
 ---
 
 # John Ho <!-- fit -->
@@ -51,4 +53,3 @@ html: true
 - Buy and Sell items
 
 ---
->>>>>>> baca86d52ba4493ed52233ec72f60470dc1fe139

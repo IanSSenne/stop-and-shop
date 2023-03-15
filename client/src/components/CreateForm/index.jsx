@@ -34,7 +34,7 @@ function CreateForm() {
 		createNewItem({
 			variables: itemData,
 		}).then(() => {
-			event.target.navigator("/profile");
+			event.target.navigator("/");
 		});
 	}
 
