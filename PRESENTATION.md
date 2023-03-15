@@ -83,6 +83,7 @@ html: true
 <!-- TODO: Expand on this and go into what is a component library. -->
 # Blueprint JS<!-- fit -->
 - React-based UI toolkit
+- Import components
 ![bg right contain](./presentationImages/bpimg.png)
 ![bg right contain](./presentationImages/bpjstoolkit.png)
 ---
