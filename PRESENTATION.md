@@ -66,6 +66,7 @@ html: true
 - Utilized branching
 - Timely responses to messages 
 - Daily standups to discuss plans and goals
+<!-- TODO: need to change standups -->
 ---
 
 # Branching and Pull Requests <!-- fit -->
@@ -79,6 +80,7 @@ html: true
 ![bg right contain ](./presentationImages/yarnscripts.png)
 ---
 
+<!-- TODO: Expand on this and go into what is a component library. -->
 # Blueprint<!-- fit -->
 - React-based UI toolkit
 ![bg right contain](./presentationImages/bpimg.png)
@@ -118,11 +120,12 @@ html: true
 ![bg right contain ](profile img)
 ---
 
-# List An Item Feature<!-- fit -->
+# Create Item Form<!-- fit -->
 - As a User I want to be able to create a listing for an item that includes a title, asking price, location, pictures, 
 ![bg right contain ](https://i.imgur.com/0Z9Z9Zm.jpg)
 
 ---
+<!-- TODO: Expand on this as a technology -->
 # SASS<!-- fit -->
  - CSS with superpowers
  - Used nested styles
@@ -134,10 +137,6 @@ html: true
 
 # Search Feature<!-- fit -->
  - As a user I want to be able to search for an item.
----
-
-# Post Item Feature<!-- fit -->
- - As a user I want to be able to post an item that I want to sell.
 ---
 
 # Future Development<!-- fit -->
@@ -152,3 +151,9 @@ html: true
 
 # Questions? <!-- fit -->
 ![bg right contain ](./presentationImages/question.gif)
+
+
+<!-- TODO: Global: More of a story, Ex. Use wireframe as a starting point for what happened due to the wireframe. -->
+<!-- TODO: How do the slides fit into the larger picture. -->
+
+<!-- TODO:  -->
