@@ -18,7 +18,7 @@ html: true
 
 # Ian Senne <!-- fit -->
 
-![bg right contain](https://i.imgur.com/0Z9Z9Zm.jpg)
+![bg 75% right contain](./presentationImages/ian.png)
 
 - Typescript Tinkerer
 - Full Stack Developer
@@ -28,7 +28,7 @@ html: true
 
 # John Ho <!-- fit -->
 
-![bg right contain](https://i.imgur.com/0Z9Z9Zm.jpg)
+![bg 75% right contain](./presentationImages/john.JPEG)
 
 - Full Stack Developer
 - Disc Golfer
@@ -71,6 +71,12 @@ html: true
 # Branching and Pull Requests <!-- fit -->
 - Created Branches for specific features
 - Made sure pull requests were reviewed and merged within a reasonable time frame
+---
+
+# Yarn<!-- fit -->
+- Package manager replacement for npm
+- Faster installs
+![bg right contain ](./presentationImages/yarnscripts.png)
 ---
 
 # Blueprint<!-- fit -->
@@ -116,6 +122,11 @@ html: true
 - As a User I want to be able to create a listing for an item that includes a title, asking price, location, pictures, 
 ![bg right contain ](https://i.imgur.com/0Z9Z9Zm.jpg)
 
+---
+# SASS<!-- fit -->
+ - CSS with superpowers
+ - Used nested styles
+ ![bg right contain ](./presentationImages/sass.png)
 ---
 # Chat Feature<!-- fit -->
 - As a user I want to be able to chat with other members on the site to potentially find a buyer/seller, to negotiate, etc
