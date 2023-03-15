@@ -115,14 +115,24 @@ html: true
 # List An Item Feature<!-- fit -->
 - As a User I want to be able to create a listing for an item that includes a title, asking price, location, pictures, 
 ![bg right contain ](https://i.imgur.com/0Z9Z9Zm.jpg)
+
+---
+# Chat Feature<!-- fit -->
+- As a user I want to be able to chat with other members on the site to potentially find a buyer/seller, to negotiate, etc
 ---
 
 # Search Feature<!-- fit -->
  - As a user I want to be able to search for an item.
 ---
 
+# Post Item Feature<!-- fit -->
+ - As a user I want to be able to post an item that I want to sell.
 ---
+
 # Future Development<!-- fit -->
+- Filters 
+- Direct Messages 
+
 ---
 # Demo<!-- fit -->
 ![bg right contain ](./presentationImages/tada.gif)
