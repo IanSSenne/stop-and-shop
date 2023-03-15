@@ -1,0 +1,28 @@
+@import "@blueprintjs/core/lib/scss/variables";
+
+.rule{
+    background: $gray5;
+    color: $dark-gray5;
+        .card{
+            justify-content: center;
+            
+            .title{
+                text-align: center;
+
+            }
+        }
+}
+
+.root{
+
+    .card{
+
+        .body{
+
+            .title{
+
+
+            }
+        }
+    }
+}
