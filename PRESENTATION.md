@@ -43,7 +43,7 @@ html: true
 
 ![bg right]()
 
-- Coder
+- Full Stack Developer
 - Piano Player
 - Snowboarder
 
@@ -53,3 +53,5 @@ html: true
 - Buy and Sell items
 
 ---
+
+
