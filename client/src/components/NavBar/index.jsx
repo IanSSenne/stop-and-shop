@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./NavBar.module.scss"
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Navbar, Button, Alignment } from "@blueprintjs/core";
 import { useAuth } from "../../contexts/Auth";

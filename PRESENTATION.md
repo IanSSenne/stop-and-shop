@@ -24,4 +24,34 @@ html: true
 - Full Stack Developer
 - Loves to learn new things
 
-<h1>hu</h1>
+
+
+
+---
+
+# John Ho <!-- fit -->
+
+![bg right]()
+
+- Disc Golfer
+- Weight Lifter
+- Full Stack Developer
+
+---
+
+# Michael Reyna <!-- fit -->
+
+![bg right]()
+
+- Full Stack Developer
+- Piano Player
+- Snowboarder
+
+---
+
+# Stop-N-Shop <!-- fit -->
+- Buy and Sell items
+
+---
+
+
