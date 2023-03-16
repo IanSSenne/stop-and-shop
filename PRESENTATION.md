@@ -38,7 +38,7 @@ html: true
 
 # Michael Reyna <!-- fit -->
 
-![bg right contain](./presentationImages/michael.png)
+![bg right contain](./presentationImages/michael.jpg)
 
 - Coder
 - Piano Player
@@ -81,9 +81,11 @@ html: true
 ---
 
 <!-- TODO: Expand on this and go into what is a component library. -->
-# Blueprint<!-- fit -->
+# Blueprint JS<!-- fit -->
 - React-based UI toolkit
+- Import components
 ![bg right contain](./presentationImages/bpimg.png)
+![bg right contain](./presentationImages/bpjstoolkit.png)
 ---
 
 # Blueprint Core<!-- fit -->
@@ -112,12 +114,12 @@ html: true
 ---
 # Home Page<!-- fit -->
 - As a User I want to see all listed items on the home page.
-![bg right contain ](homepage img)
+![bg right contain ](./presentationImages/homequery.png)
 ---
 
 # Profile Page<!-- fit --> 
 - As a User I want to be able to see the Items I am selling and the Items I have bookmarked on my Profile.
-![bg right contain ](profile img)
+![bg right contain ](./presentationImages/profquery.png)
 ---
 
 # Create Item Form<!-- fit -->
