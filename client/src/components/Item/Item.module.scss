@@ -4,8 +4,9 @@
     background: $gray5;
     color: $dark-gray5;
         .card{
+            display: block;
             justify-content: center;
-            
+            max-width: 100px;
             .title{
                 text-align: center;
 
