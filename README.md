@@ -4,7 +4,7 @@
 
 
 
-[Click here for Deployed Site]()
+[Click here for Deployed Site](https://aqueous-meadow-79606.herokuapp.com/)
 
 ## Table of Contents 
 * [Technology Used](#technology-used)
@@ -32,7 +32,6 @@
 | Express |  https://expressjs.com/   |
 | ZOD | https://zod.dev/    |
 | clsx | https://www.npmjs.com/package/clsx    |
-| geolocator |  https://www.npmjs.com/package/geolocator   |
 | Cloudinary |  https://www.npmjs.com/package/cloudinary   |
 
 ## Learning Points
