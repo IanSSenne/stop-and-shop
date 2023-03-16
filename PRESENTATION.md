@@ -38,7 +38,7 @@ html: true
 
 # Michael Reyna <!-- fit -->
 
-![bg right contain](https://i.imgur.com/0Z9Z9Zm.jpg)
+![bg right contain](./presentationImages/michael.jpg)
 
 - Full Stack Developer
 - Piano Player
@@ -91,9 +91,19 @@ html: true
 ---
 
 <!-- TODO: Expand on this and go into what is a component library. -->
-# Blueprint<!-- fit -->
+# Blueprint JS<!-- fit -->
 - React-based UI toolkit
+- Import components
 ![bg right contain](./presentationImages/bpimg.png)
+---
+
+# What is a component library? <!-- fit -->
+- A collection of pre-built components
+- Allows for faster development
+- Allows for consistent styling
+
+![bg right contain](./presentationImages/bpjstoolkit.png)
+
 ---
 
 # Blueprint Core<!-- fit -->
@@ -122,17 +132,17 @@ html: true
 ---
 # Home Page<!-- fit -->
 - As a User I want to see all listed items on the home page.
-![bg right contain ](homepage img)
+![bg right contain ](./presentationImages/homequery.png)
 ---
 
 # Profile Page<!-- fit --> 
 - As a User I want to be able to see the Items I am selling and the Items I have bookmarked on my Profile.
-![bg right contain ](profile img)
+![bg right contain ](./presentationImages/profquery.png)
 ---
 
 # Create Item Form<!-- fit -->
 - As a User I want to be able to create a listing for an item that includes a title, asking price, location, pictures, 
-![bg right contain ](https://i.imgur.com/0Z9Z9Zm.jpg)
+![bg right contain ](./presentationImages/create.png)
 
 ---
 <!-- TODO: Expand on this as a technology -->
