@@ -159,6 +159,8 @@ html: true
 - Filters 
 - Direct Messages 
 - Search Feature
+- Add Items to bookmarked
+- Delete Items/ mark as sold
 
 ---
 # Demo<!-- fit -->
