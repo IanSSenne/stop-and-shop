@@ -40,7 +40,7 @@ html: true
 
 ![bg right contain](./presentationImages/michael.jpg)
 
-- Coder
+- Full Stack Developer
 - Piano Player
 - Snowboarder
 
@@ -66,7 +66,17 @@ html: true
 - Utilized branching
 - Timely responses to messages 
 - Daily standups to discuss plans and goals
+- Pair Programming
 <!-- TODO: need to change standups -->
+---
+# Technology Used <!-- fit -->
+- SASS 
+- BluePrint JS
+- Yarnpkg 
+- Cloudinary
+- jsx
+- Vite js
+
 ---
 
 # Branching and Pull Requests <!-- fit -->
