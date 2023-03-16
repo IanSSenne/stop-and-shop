@@ -1,8 +1,9 @@
 # Stop-n-Shop
 
 ## Description
+Stop-n-Shop is a simple market place for customers to sell and buy items from one another. They can chat with each other about the item they want, discuss prices, and settle on an agrement. Stop-n-Shop also allows customers to search items by name or tag, to find any item of interest. Stop-n-Shop can allow users to save items that they might want to save for later. 
 
-
+![image](./README%20images/Screenshot%202023-03-16%20130106.png)
 
 [Click here for Deployed Site](https://aqueous-meadow-79606.herokuapp.com/)
 
@@ -12,6 +13,23 @@
 * [Contributer Info](#contributer-info)
 * [Credits](#credits)
 * [License](#license)
+
+## Code Snippets
+
+### Item 
+![image](./README%20images/Screenshot%202023-03-16%20130125.png)
+
+### Chat of 1 on 1
+
+![image](./README%20images/Screenshot%202023-03-16%20130220.png)
+
+### User Chat 
+
+![image](./README%20images/Screenshot%202023-03-16%20130304.png)
+
+### Create Item Form
+
+![image](./README%20images/Screenshot%202023-03-16%20130254.png)
 
 ## Technology Used
 
@@ -34,10 +52,6 @@
 | clsx | https://www.npmjs.com/package/clsx    |
 | Cloudinary |  https://www.npmjs.com/package/cloudinary   |
 
-## Learning Points
-
-
-
 ## Contributer Info
 
 ### Ian Senne
@@ -55,12 +69,7 @@
 
 [GitHub](https://github.com/michaelreyna25)
 
-## Credits 
 
-|Resource | Link |
-|-------|:-------:|
-| |  |
-|      |    |
 ## License
 MIT License
 
