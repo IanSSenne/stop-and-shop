@@ -38,7 +38,7 @@ html: true
 
 # Michael Reyna <!-- fit -->
 
-![bg right contain](https://i.imgur.com/0Z9Z9Zm.jpg)
+![bg right contain](./presentationImages/michael.jpg)
 
 - Full Stack Developer
 - Piano Player
