@@ -18,7 +18,7 @@ html: true
 
 # Ian Senne <!-- fit -->
 
-![bg right contain](https://i.imgur.com/0Z9Z9Zm.jpg)
+![bg 75% right contain](./presentationImages/ian.png)
 
 - Typescript Tinkerer
 - Full Stack Developer
@@ -28,7 +28,7 @@ html: true
 
 # John Ho <!-- fit -->
 
-![bg right contain](https://i.imgur.com/0Z9Z9Zm.jpg)
+![bg 75% right contain](./presentationImages/john.JPEG)
 
 - Full Stack Developer
 - Disc Golfer
@@ -40,7 +40,7 @@ html: true
 
 ![bg right contain](https://i.imgur.com/0Z9Z9Zm.jpg)
 
-- Coder
+- Full Stack Developer
 - Piano Player
 - Snowboarder
 
@@ -66,6 +66,17 @@ html: true
 - Utilized branching
 - Timely responses to messages 
 - Daily standups to discuss plans and goals
+- Pair Programming
+<!-- TODO: need to change standups -->
+---
+# Technology Used <!-- fit -->
+- SASS 
+- BluePrint JS
+- Yarnpkg 
+- Cloudinary
+- jsx
+- Vite js
+
 ---
 
 # Branching and Pull Requests <!-- fit -->
@@ -73,6 +84,13 @@ html: true
 - Made sure pull requests were reviewed and merged within a reasonable time frame
 ---
 
+# Yarn<!-- fit -->
+- Package manager replacement for npm
+- Faster installs
+![bg right contain ](./presentationImages/yarnscripts.png)
+---
+
+<!-- TODO: Expand on this and go into what is a component library. -->
 # Blueprint<!-- fit -->
 - React-based UI toolkit
 ![bg right contain](./presentationImages/bpimg.png)
@@ -112,17 +130,29 @@ html: true
 ![bg right contain ](profile img)
 ---
 
-# List An Item Feature<!-- fit -->
+# Create Item Form<!-- fit -->
 - As a User I want to be able to create a listing for an item that includes a title, asking price, location, pictures, 
 ![bg right contain ](https://i.imgur.com/0Z9Z9Zm.jpg)
+
+---
+<!-- TODO: Expand on this as a technology -->
+# SASS<!-- fit -->
+ - CSS with superpowers
+ - Used nested styles
+ ![bg right contain ](./presentationImages/sass.png)
+---
+# Chat Feature<!-- fit -->
+- As a user I want to be able to chat with other members on the site to potentially find a buyer/seller, to negotiate, etc
 ---
 
 # Search Feature<!-- fit -->
  - As a user I want to be able to search for an item.
 ---
 
----
 # Future Development<!-- fit -->
+- Filters 
+- Direct Messages 
+
 ---
 # Demo<!-- fit -->
 ![bg right contain ](./presentationImages/tada.gif)
@@ -131,3 +161,9 @@ html: true
 
 # Questions? <!-- fit -->
 ![bg right contain ](./presentationImages/question.gif)
+
+
+<!-- TODO: Global: More of a story, Ex. Use wireframe as a starting point for what happened due to the wireframe. -->
+<!-- TODO: How do the slides fit into the larger picture. -->
+
+<!-- TODO:  -->
