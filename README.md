@@ -1,7 +1,7 @@
 # Stop-n-Shop
 
 ## Description
-
+An application to list items for users to buy and sell. Also has a chat feature for users to communicate with the other users on the website. 
 
 
 [Click here for Deployed Site](https://aqueous-meadow-79606.herokuapp.com/)

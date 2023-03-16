@@ -155,13 +155,10 @@ html: true
 - As a user I want to be able to chat with other members on the site to potentially find a buyer/seller, to negotiate, etc
 ---
 
-# Search Feature<!-- fit -->
- - As a user I want to be able to search for an item.
----
-
 # Future Development<!-- fit -->
 - Filters 
 - Direct Messages 
+- Search Feature
 
 ---
 # Demo<!-- fit -->
