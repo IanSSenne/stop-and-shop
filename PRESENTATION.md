@@ -95,7 +95,15 @@ html: true
 - React-based UI toolkit
 - Import components
 ![bg right contain](./presentationImages/bpimg.png)
+---
+
+# What is a component library? <!-- fit -->
+- A collection of pre-built components
+- Allows for faster development
+- Allows for consistent styling
+
 ![bg right contain](./presentationImages/bpjstoolkit.png)
+
 ---
 
 # Blueprint Core<!-- fit -->
@@ -134,7 +142,7 @@ html: true
 
 # Create Item Form<!-- fit -->
 - As a User I want to be able to create a listing for an item that includes a title, asking price, location, pictures, 
-![bg right contain ](https://i.imgur.com/0Z9Z9Zm.jpg)
+![bg right contain ](./presentationImages/create.png)
 
 ---
 <!-- TODO: Expand on this as a technology -->
