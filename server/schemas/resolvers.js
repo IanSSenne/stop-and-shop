@@ -65,8 +65,30 @@ const resolvers = {
 			const token = signToken(user);
 			return { token, user };
 		},
-		async addItem(parent, { title, photo, location, date, ask }, context) {
-			const item = await Item.create({ title, photo, location, date, ask });
+		async addItem(parent, { title, photos, location, date, ask, tags }, context) {
+			if (context.user) {
+				if (tags) {
+					let newTags = [];
+					for (let tag of tags) {
+						console.log("ADD ITEM", tag);
+						let foundTag = await Tag.findOne({
+							name: tag,
+						});
+						if (foundTag) {
+							newTags.push(foundTag);
+						} else {
+							console.log("ADD ITEM", tag);
+							newTags.push(await Tag.create({ name: tag, color: "#000000" }));
+						}
+					}
+					tags = newTags;
+				}
+				const item = await Item.create({ title, photos, location, date, ask, tags });
+				await item.save();
+				await User.findByIdAndUpdate(context.user._id, { $push: { sellingItems: item._id } }, { new: true });
+				return item;
+			}
+			throw new AuthenticationError("You need to be logged in!");
 		},
 		async login(parent, { email, password }) {
 			const user = await User.findOne({ email });
